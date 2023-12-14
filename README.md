@@ -6,3 +6,6 @@ It then limits the string to 90 chars (to fit the label field) and adds the item
 Finally, it prints the label.
 
 This simple app reduces the time to print a label from 30.5 sec to 12.2 sec, which at the company's rate of aprox. 926 labels per month, saves one employee around 4 hours and 43 minutes per month.
+
+Print-screen:
+![image](https://github.com/avaseduard/print-label/assets/108252343/01125e8a-68c2-4ecf-9de6-b3fc3f36e980)
