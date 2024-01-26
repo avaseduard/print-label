@@ -1,18 +1,18 @@
 import pyautogui
 
 def limit_string(input_string):
-    # If string is shorther than 90 chars, return as it is
-    if len(input_string) <= 90:
+    # If string is shorther than 75 chars, return as it is
+    if len(input_string) <= 74:
         return input_string
     # If the last character is a space, cut there
-    if input_string[89] == ' ':
-        return input_string[0:89]
+    if input_string[74] == ' ':
+        return input_string[0:74]
     # If the last character isn't a space, find the last space and cut there
-    last_space_index = input_string.rfind(' ', 0, 89)
+    last_space_index = input_string.rfind(' ', 0, 74)
     if last_space_index != -1:
         return input_string[:last_space_index]
-    # If no space is found before 90 characters, simply truncate to 90 characters
-    return input_string[0:89]
+    # If no space is found before 75 characters, simply truncate to 75 characters
+    return input_string[0:74]
 
 def send_to_printer(number, name):
     # Click A (edit button)

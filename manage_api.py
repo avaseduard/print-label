@@ -10,7 +10,7 @@ def search_by_cod(cod):
    # Parse the CSV data
    if response.status_code == 200:
        csv_data = StringIO(response.text)
-       reader = csv.DictReader(csv_data)      
+       reader = csv.DictReader(csv_data)
        # Search for 'nume' by 'cod'
        for row in reader:
            if row['cod'] == cod:
