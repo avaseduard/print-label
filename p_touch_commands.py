@@ -14,21 +14,25 @@ def limit_string(input_string):
     # If no space is found before 75 characters, simply truncate to 75 characters
     return input_string[0:74]
 
-def send_to_printer(number, name):
+def send_to_printer(item_number, label_number, item_name):
     # Click A (edit button)
     pyautogui.click(x=1240, y=133)
     # Click on the 'Cod' label field and select all
     pyautogui.click(x=1723, y=515)
     pyautogui.hotkey('ctrl', 'a')
     # Input the item's code
-    pyautogui.write('#'+number[0:13]) # max 15 char
+    pyautogui.write('#'+item_number[0:13]) # max 14 char
     # Click on the 'Name' label field and select all
     pyautogui.click(x=1723, y=334)
     pyautogui.hotkey('ctrl', 'a')
     # Input the item's name
-    pyautogui.write(limit_string(name)) # max 90 char
-    # Print the label
+    pyautogui.write(limit_string(item_name)) # max 75 char
+    # Print dialog box
     pyautogui.hotkey('ctrl', 'p')
+    # Input the number of labels
+    pyautogui.press('b')
+    pyautogui.write(label_number)
+    # Print the label
     pyautogui.press('enter')
 
     # For development purposes
