@@ -1,5 +1,6 @@
 import pyautogui
-
+import time
+# 
 def limit_string(input_string):
     # If string is shorther than 75 chars, return as it is
     if len(input_string) <= 74:
@@ -14,7 +15,10 @@ def limit_string(input_string):
     # If no space is found before 75 characters, simply truncate to 75 characters
     return input_string[0:74]
 
-def send_to_printer(item_number, label_number, item_name):
+def send_to_printer(item_number, item_name, label_number=''):
+    if label_number == '':
+        label_number = '1'
+    print('Send to printer triggered')
     # Click A (edit button)
     pyautogui.click(x=1240, y=133)
     # Click on the 'Cod' label field and select all
